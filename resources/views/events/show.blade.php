@@ -7,7 +7,7 @@
 
     <div class="col-md-10 offset-md-1">
         <div class="row">
-            <div id="image-container" class="col-md-6">
+            <div id="image-container" class="mt-2 col-md-6">
                 <img src="/storage/events/{{ $event->image }}" class="img-fluid" alt="{{ $event->title }}">
             </div>
             <div id="info-container" class="col-md-6">

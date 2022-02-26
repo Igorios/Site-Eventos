@@ -21,6 +21,10 @@ body {
     background-color: #007e54;
 }
 
+.navbar {
+    padding: 0 !important;
+}
+
 .navbar-nav .nav-link {
     font-size: 18px;
 }

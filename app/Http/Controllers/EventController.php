@@ -29,10 +29,6 @@ class EventController extends Controller
         return view('events.create');
     }
 
-    public function contact() {
-        return view('events.contact');
-    }
-
 
     public function store(Request $request) {
 

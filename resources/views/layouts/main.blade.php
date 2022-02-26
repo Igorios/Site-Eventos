@@ -15,39 +15,49 @@
 
         <!-- CSS -->
         <link rel="stylesheet" href="/css/style.css">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="/img/logo-events-new.png" type="image/x-icon">
     </head>
     <body>
         <header>
-            <nav class="navbar d-flex justify-content-center navbar-expand-lg navbar-light bg-light">
-                <div class="" id="navbar">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a href="/" class="nav-link">EVENTOS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/events/create" class="nav-link">CRIAR EVENTOS</a>
-                        </li>
-                        @auth
+            <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex flex-column">
+                <div class="container" id="navbar">
+                    <a class="navbar-brand" href="/">
+                        <img src="/img/logo-events-new.png" width="80px" alt="logo">
+                    </a>
+                    <div class="justify-content-end">
+                        <ul class="navbar-nav nav-pills"> 
                             <li class="nav-item">
-                                <a href="/dashboard" class="nav-link">MEUS EVENTOS</a>
+                                <a href="/" class="nav-link">EVENTOS</a>
                             </li>
                             <li class="nav-item">
-                                <form action="/logout" method="POST">
-                                {{ csrf_field() }}
-                                    <a href="/logout" class="nav-link" onclick="event.preventDefault(); this.closest('form').submit();">SAIR</a>
-                                </form>
+                                <a href="/events/create" class="nav-link">CRIAR EVENTOS</a>
                             </li>
-                        @endauth
-                        @guest
-                            <li class="nav-item">
-                                <a href="/login" class="nav-link">ENTRAR</a>
-                            </li>  
-                            <li class="nav-item">
-                                <a href="/register" class="nav-link">CADASTRAR</a>
-                            </li>
-                        @endguest
-                    </ul>
+                            @auth
+                                <li class="nav-item">
+                                    <a href="/dashboard" class="nav-link">MEUS EVENTOS</a>
+                                </li>
+                                <li class="nav-item">
+                                    <form action="/logout" method="POST">
+                                    {{ csrf_field() }}
+                                        <a href="/logout" class="nav-link" onclick="event.preventDefault(); this.closest('form').submit();">SAIR</a>
+                                    </form>
+                                </li>
+                            @endauth
+                            @guest
+                                <li class="nav-item">
+                                    <a href="/login" class="nav-link">ENTRAR</a>
+                                </li>  
+                                <li class="nav-item">
+                                    <a href="/register" class="nav-link">CADASTRAR</a>
+                                </li>
+                            @endguest
+                        </ul>
+    
+                    </div>
                 </div>
+                    
             </nav>
         </header>
         <main class="container-fluid">
@@ -60,7 +70,7 @@
         <div class="mb-5">
             @yield('content')
         </div>
-    <footer class="container-fluid">Eventos Agradece &copy; 2022</footer>
+    <footer class="container-fluid">Events World &copy; 2022</footer>
     <script src="/js/script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 </body>

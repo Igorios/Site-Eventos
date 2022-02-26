@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Criar Evento')
+@section('title', 'Events World')
 
 @section('content')
 
@@ -18,7 +18,7 @@
         <h2 class="text-center">Buscando por: {{ $search }}</h2>
     @else
         <h2 class="text-center">Próximos eventos</h2>
-        <p>Nos próximos dias teremos:</p>
+        <p style="color: #7c7c7c;">Nos próximos dias teremos:</p>
     @endif
     
     <div id="cards-container d-flex" class="row">
@@ -28,8 +28,10 @@
                 <div class="card-body">
                     <p class="card-date">{{ date('d/m/Y', strtotime($event->date)) }}</p>
                     <h5 class="card-title fs-4">{{$event->title}}</h5>
-                    @if (count($event->users) < 2)
+                    @if (count($event->users) == 1)
                         <p class="card-participants">{{ count($event->users) }} Participante</p>
+                    @elseif (count($event->users) == 0)
+                        <p class="card-participants">Nenhum participante</p>
                     @else
                         <p class="card-participants"> {{ count($event->users) }} Participantes</p>
                     @endif
@@ -38,7 +40,7 @@
             </div>
         @endforeach
         @if (count($events) == 0)
-            <p class="fs-6">Não há eventos no momento :(</p>
+            <p style="color: #7c7c7c;" class="fs-6">Não há eventos no momento :(</p>
         @endif
     </div> 
 
