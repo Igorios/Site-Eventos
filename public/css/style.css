@@ -1,0 +1,158 @@
+
+* {
+    font-family: 'Roboto', Arial;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    position: relative;
+}
+
+.btn {
+    border: none;
+    background-color: #7fffd4;
+}
+
+.btn:hover {
+    background-color: #007e54;
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007e54 !important;
+}
+
+
+/*welcome*/
+#search-container {
+    background: center/cover url("../img/imagem-1.jpg");
+    height: 500px;
+    padding: 50px;
+    text-align: center;
+}
+
+.titulo-welcome {
+    font-weight: bold;
+    color: #fff;
+}
+
+
+/*create*/
+#event-create-container {
+    margin-top: 5%;
+}
+.form-group {
+    margin-top: 20px;
+}
+
+.form-div {
+    margin-bottom: 18%;
+}
+
+
+/*show*/
+#info-container {
+    margin-top: 5%;
+}
+
+#info-container h1 {
+    color: #0a271d;
+}
+
+#info-container p {
+    color: #0a271d;
+}
+
+#description-container h3 {
+    color: #0a271d;
+}
+
+#description-container p {
+    color: #0a271d;
+}
+
+.h3Evento {
+    color: #0a271d;
+}
+
+#items-list {
+    color: #0a271d;
+    padding-left: 0;
+    margin-left: 3%;
+}
+
+#items-list li {
+    display: flex;
+}
+
+.already-join-msg {
+    margin-top: 20px 0;
+    padding: 10px;
+    width: 250px;
+}
+
+/*Dashboard*/
+.dashboard-title-container {
+    margin: 30px 0 30px 8%;
+}
+
+.dashboard-events-container th {
+    width: 20%;
+}
+
+.dashboard-events-container tr a {
+    margin-right: 2%;
+}
+
+.dashboard-events-container form {
+    display: inline-block;
+}
+
+.dashboard-events-container .edit-btn {
+    color: #ffffff;
+    background-color: #1875FD;
+}
+
+.dashboard-events-container .edit-btn:hover {
+    color: #ffffff;
+    background-color: #041e44;
+    transition: 0.4s;
+}
+
+.dashboard-events-container .delete-btn {
+    color: #ffffff;
+    background-color: #DD4251;
+}
+
+.dashboard-events-container .delete-btn:hover {
+    color: #ffffff;
+    background-color: #4d1319;
+    transition: 0.5s;
+}
+
+
+/*edit*/
+.img-preview {
+    width: 80px;
+    margin-left: 10px;
+}
+
+
+/*footer*/
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    background-color: #0a271d;
+}
